@@ -259,6 +259,56 @@
 
 }
 
+  .fact-row {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:0.88rem;
+
+    padding-bottom:0.7rem;
+
+    border-bottom:1px solid var(--border);
+
+    gap:1rem;
+
+}
+
+  .about-buttons{
+
+    margin-top:2rem;
+
+    display:flex;
+
+    gap:0.8rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+@media(max-width:30rem){
+
+    .fact-row{
+
+        flex-direction:column;
+
+        gap:0.3rem;
+
+    }
+
+  
+    .about-buttons a{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
 
 
 @media(max-width:48rem){
@@ -1416,11 +1466,36 @@ opacity:.7;
 
 }
 
+.about-grid {
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:3rem;
+
+    align-items:center;
+
+}
+
 
 
 /* Tablet + Mobile */
 
 @media(max-width:48rem){
+
+    .reveal {
+        width:100%;
+    }
+
+  
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:2rem;
+
+    }
 
 
     .hero-ai-visual{
@@ -1583,7 +1658,7 @@ opacity:.7;
     <div class="section-tag">Who I Am</div>
     <h2 class="section-title">About <span>Me</span></h2>
     <div class="section-line"></div>
-    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;" class="about-grid">
+    <div class="about-grid">
       <div class="reveal">
         <p style="color:var(--muted);line-height:1.9;margin-bottom:1rem;font-size:0.97rem;">
           I'm an <strong style="color:var(--text)">AI Engineer at Tata Consultancy Services</strong>, working with 
@@ -1605,7 +1680,7 @@ opacity:.7;
           I continue sharpening my problem-solving skills through LeetCode (300+ problems) and exploring the future 
           of intelligent software systems.
         </p>
-        <div style="margin-top:2rem;display:flex;gap:0.8rem;flex-wrap:wrap;">
+        <div class="about-buttons">
           <a href="https://raw.githubusercontent.com/DIVAKARYANDRA/my-portfolio/f77f5ca5978f1ae1db3ae7450c9ffd5f3f64ac52/Divakar_Yandra.pdf" 
    download="Divakar_Yandra_Resume.pdf" 
    class="btn-primary" 
@@ -1619,15 +1694,15 @@ opacity:.7;
         <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem;">
           <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">Quick Facts</div>
           <div style="display:flex;flex-direction:column;gap:0.8rem;">
-            <div style="display:flex;justify-content:space-between;font-size:0.88rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border);">
+            <div class="fact-row">
               <span style="color:var(--muted)"><i class="fas fa-map-marker-alt" style="margin-right:0.5rem;color:var(--accent)"></i>Location</span>
               <span>Hyderabad, India</span>
             </div>
-            <div style="display:flex;justify-content:space-between;font-size:0.88rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border);">
+            <div class="fact-row">
               <span style="color:var(--muted)"><i class="fas fa-briefcase" style="margin-right:0.5rem;color:var(--accent)"></i>Current Role</span>
               <span>AI Engineer @ TCS</span>
             </div>
-            <div style="display:flex;justify-content:space-between;font-size:0.88rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border);">
+            <div class="fact-row">
               <span style="color:var(--muted)"><i class="fas fa-graduation-cap" style="margin-right:0.5rem;color:var(--accent)"></i>Degree</span>
               <span>B.Tech — 9.3 CGPA</span>
             </div>
