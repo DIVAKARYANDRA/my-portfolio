@@ -858,6 +858,69 @@
     gap: 0.4rem;
   }
 
+  
+.project-links {
+
+    display:flex;
+
+    gap:0.8rem;
+
+    margin:1.2rem 0 1.5rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+.project-links a {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:0.5rem;
+
+    padding:0.55rem 1.2rem;
+
+    border-radius:2rem;
+
+    font-size:0.85rem;
+
+    text-decoration:none;
+
+    transition:all 0.3s ease;
+
+}
+
+
+/* Live Demo */
+
+.live-link {
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+
+    color:white;
+
+    box-shadow:
+    0 0 1rem rgba(124,92,252,0.35);
+
+}
+
+
+.live-link:hover {
+
+    transform:translateY(-0.2rem);
+
+    box-shadow:
+    0 0 2rem rgba(124,92,252,0.55);
+
+}
+
   .stack-tag {
     background: rgba(124,92,252,0.1);
     border: 1px solid rgba(124,92,252,0.2);
@@ -2028,6 +2091,15 @@ opacity:.7;
         <div class="project-icon icon-purple" style="background:rgba(124,92,252,0.15);">
           🤖
         </div>
+
+        <div class="project-links">
+            <a href="YOUR_AGENTFORGE_VERCEL_URL" 
+               target="_blank" 
+               class="live-link">
+                <i class="fas fa-rocket"></i>
+                Live Demo
+            </a>
+        </div>
     
         <div class="project-title">
           AgentForge — Autonomous Multi-Agent AI Orchestration Platform
@@ -2090,6 +2162,18 @@ opacity:.7;
         <div class="project-icon icon-teal" style="background:rgba(0,212,170,0.12);">
           🎯
         </div>
+
+        <div class="project-links">
+
+          <a href="https://interviewpilot-ai-umber.vercel.app/"
+             target="_blank"
+             class="live-link">
+              <i class="fas fa-play"></i>
+              Live Demo
+          </a>
+      
+      
+      </div>
     
         <div class="project-title">
           InterviewPilot AI — Adaptive AI Interview Assessment Platform
