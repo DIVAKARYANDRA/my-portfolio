@@ -1072,6 +1072,231 @@
     .hero-stats { grid-template-columns: 1fr 1fr; }
     .hero-btns { flex-direction: column; }
   }
+
+
+  .hero-ai-visual {
+    position:relative;
+    width:100%;
+    height:650px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.ai-avatar-container {
+
+    position:relative;
+    width:430px;
+    height:520px;
+    z-index:2;
+
+}
+
+
+.ai-avatar {
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    border-radius:40px;
+
+    box-shadow:
+    0 0 80px rgba(124,92,252,.45);
+
+}
+
+
+.ai-glow {
+
+position:absolute;
+
+width:420px;
+height:420px;
+
+background:
+radial-gradient(
+circle,
+rgba(124,92,252,.45),
+transparent 70%
+);
+
+filter:blur(50px);
+
+}
+
+
+
+/* Floating badges */
+
+
+.float-badge {
+
+position:absolute;
+
+padding:12px 20px;
+
+border-radius:30px;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+
+color:white;
+
+font-size:.9rem;
+
+display:flex;
+
+gap:8px;
+
+align-items:center;
+
+animation:
+float 4s ease-in-out infinite;
+
+}
+
+
+@keyframes float {
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+
+/* Badge positions */
+
+
+.ai-badge-1 {
+
+top:30px;
+left:-80px;
+
+color:#b388ff;
+
+}
+
+
+.ai-badge-2 {
+
+top:150px;
+left:-120px;
+
+color:#00d4aa;
+
+}
+
+
+.ai-badge-3 {
+
+top:50px;
+right:-100px;
+
+color:#ff9900;
+
+}
+
+
+.ai-badge-4 {
+
+bottom:160px;
+left:-90px;
+
+color:#3776ab;
+
+}
+
+
+.ai-badge-5 {
+
+bottom:80px;
+right:-120px;
+
+color:#ff6b35;
+
+}
+
+
+.ai-badge-6 {
+
+top:260px;
+right:-130px;
+
+color:#ff9900;
+
+}
+
+
+.ai-badge-7 {
+
+bottom:20px;
+right:20px;
+
+color:#00e5ff;
+
+}
+
+
+
+.ai-stats {
+
+position:absolute;
+
+bottom:20px;
+
+width:90%;
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+padding:20px;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:20px;
+
+
+}
+
+
+.ai-stats div {
+
+text-align:center;
+
+}
+
+
+.ai-stats strong {
+
+display:block;
+
+font-size:2rem;
+
+}
+
+
+.ai-stats span {
+
+font-size:.8rem;
+
+opacity:.7;
+
+}
 </style>
 </head>
 <body>
@@ -1129,35 +1354,79 @@
         </div>
       </div>
 
-      <div class="hero-orb">
-        <div class="orb-container">
-          <div class="orb-bg">
-            <div class="orb-ring orb-ring-1"></div>
-            <div class="orb-ring orb-ring-2"></div>
-            <div class="orb-inner">DY</div>
+      <div class="hero-ai-visual">
+      
+        <div class="ai-glow"></div>
+      
+        <div class="ai-avatar-container">
+      
+          <img 
+            src="assets/divakar-ai-avatar.png"
+            alt="Divakar Yandra AI Engineer"
+            class="ai-avatar"
+          />
+      
+          <!-- Floating AI Skills -->
+      
+          <div class="float-badge ai-badge-1">
+            <i class="fas fa-brain"></i> LLMs
           </div>
-          <div class="float-badge float-badge-1">
-            <i class="fas fa-robot" style="color:#7c5cfc"></i> Generative AI
+      
+          <div class="float-badge ai-badge-2">
+            <i class="fas fa-database"></i> RAG
           </div>
-          
-          <div class="float-badge float-badge-2">
-            <i class="fas fa-brain" style="color:#00d4aa"></i> LLM Engineering
+      
+          <div class="float-badge ai-badge-3">
+            <i class="fas fa-robot"></i> AI Agents
           </div>
-          
-          <div class="float-badge float-badge-3">
-            <i class="fas fa-search" style="color:#f90"></i> RAG + Vector DB
+      
+          <div class="float-badge ai-badge-4">
+            <i class="fab fa-python"></i> Python
           </div>
-          
-          <div class="float-badge float-badge-4">
-            <i class="fab fa-python" style="color:#3776ab"></i> Python Backend
+      
+          <div class="float-badge ai-badge-5">
+            <i class="fas fa-project-diagram"></i> LangGraph
           </div>
-          
-          <div class="float-badge float-badge-5">
-            <i class="fas fa-project-diagram" style="color:#f37121"></i> Multi-Agent Systems
+      
+          <div class="float-badge ai-badge-6">
+            <i class="fas fa-cloud"></i> AWS
           </div>
+      
+          <div class="float-badge ai-badge-7">
+            <i class="fas fa-bolt"></i> FastAPI
+          </div>
+      
+      
         </div>
+      
+      
+        <!-- Bottom Stats -->
+      
+        <div class="ai-stats">
+      
+          <div>
+            <strong>3.1+</strong>
+            <span>Years Experience</span>
+          </div>
+      
+          <div>
+            <strong>300+</strong>
+            <span>LeetCode</span>
+          </div>
+      
+          <div>
+            <strong>2</strong>
+            <span>AI Products</span>
+          </div>
+      
+          <div>
+            <strong>8+</strong>
+            <span>AWS Services</span>
+          </div>
+      
+        </div>
+      
       </div>
-    </div>
   </div>
 </section>
 
